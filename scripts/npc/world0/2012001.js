@@ -2,19 +2,19 @@ function start() {
     if(cm.haveItem(4031047)){
         var em = cm.getEventManager("Boats");
         if (em.getProperty("entry") == "true")
-            cm.sendYesNo("§A­n«e©¹Å]ªk´ËªL¶Ü?");
+            cm.sendYesNo("ä½ è¦å‰å¾€é­”æ³•æ£®æ—å—?");
         else{
-            cm.sendOk("«e©¹Å]ªk´ËªLªº­¸²î¤w¸g¥Xµo¤F¡A½Ğ­@¤ßµ¥«İ¤U¤@¯Z¦¸¡C");
+            cm.sendOk("å‰å¾€é­”æ³•æ£®æ—çš„é£›èˆ¹å·²ç¶“å‡ºç™¼äº†ï¼Œè«‹è€å¿ƒç­‰å¾…ä¸‹ä¸€ç­æ¬¡ã€‚");
             cm.dispose();
         }
     }else{
-        cm.sendOk("¦A¦¸½T»{¬O§_«ù¦³«e©¹Å]ªk´ËªLªº²î²¼!");
+        cm.sendOk("å†æ¬¡ç¢ºèªæ˜¯å¦æŒæœ‰å‰å¾€é­”æ³•æ£®æ—çš„èˆ¹ç¥¨!");
         cm.dispose();
     }
 }
 function action(mode, type, selection) {
 	if (mode <= 0) {
-		cm.sendOk("¦pªG§A§ïÅÜ¥D·N¤F¦A¨Ó§ä§Ú´N¥i¥H¤F!");
+		cm.sendOk("å¦‚æœä½ æ”¹è®Šä¸»æ„äº†å†ä¾†æ‰¾æˆ‘å°±å¯ä»¥äº†!");
 		cm.dispose();
 		return;
     }

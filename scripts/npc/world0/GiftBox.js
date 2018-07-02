@@ -20,7 +20,7 @@ function action(mode, type, selection) {
 			var txt = "";
 			list = giftbox.getItems(true);
 			if(list.length > 0){
-				txt += "#e#k<±b¸¹Â§ª«> :#n\r\n\r\n";
+				txt += "#e#k<å¸³è™Ÿç¦®ç‰©> :#n\r\n\r\n";
 				for(var i = 0;i < list.length;i++) {
 					var item = list.get(i);
 					if(i != 0) txt +="\r\n"
@@ -29,7 +29,7 @@ function action(mode, type, selection) {
 			}
 			list = giftbox.getItems(false);
 			if(list.length > 0){
-				txt += "\r\n\r\n#e#k<¨¤¦âÂ§ª«> :#n\r\n\r\n";
+				txt += "\r\n\r\n#e#k<è§’è‰²ç¦®ç‰©> :#n\r\n\r\n";
 				for(var i = 0;i < list.length;i++) {
 					var item = list.get(i);
 					if(i != 0) txt +="\r\n"
@@ -38,7 +38,7 @@ function action(mode, type, selection) {
 			}
 			cm.sendSimple(txt);
 		} else {
-			cm.sendOk("¥Ø«e¨S¦³¥i¥H»â¨úªºÂ§ª«!");
+			cm.sendOk("ç›®å‰æ²’æœ‰å¯ä»¥é ˜å–çš„ç¦®ç‰©!");
 			cm.dispose();
 		}
 	} else if(status == 1) {
@@ -46,9 +46,9 @@ function action(mode, type, selection) {
 		var isAccountGift = (selection < 0);
 		var sel = Math.abs(selection) - 10;
 		if(giftbox.takeOut(sel, isAccountGift)) {
-			cm.sendNext("»â¨ú¦¨¥\!#b(ªð¦^Â§ª«²M³æ)");
+			cm.sendNext("é ˜å–æˆåŠŸ!#b(è¿”å›žç¦®ç‰©æ¸…å–®)");
 		} else {
-			cm.sendOk("»â¨ú¥¢±Ñ!½ÐÀË¬d­I¥]ªÅ¶¡¬O§_¨¬°÷¡A©ÎªÌ¦¹¹D¨ã¬O§_¬°±MÄÝ¹D¨ã!");
+			cm.sendOk("é ˜å–å¤±æ•—!è«‹æª¢æŸ¥èƒŒåŒ…ç©ºé–“æ˜¯å¦è¶³å¤ ï¼Œæˆ–è€…æ­¤é“å…·æ˜¯å¦ç‚ºå°ˆå±¬é“å…·!");
 			cm.dispose();
 		}
 	}

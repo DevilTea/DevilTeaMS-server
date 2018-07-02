@@ -16,7 +16,7 @@ function action(mode, type, selection) {
 	} else if(mode == 1) {
 		status++;
 		if(status == 0) {
-			cm.sendSimple("§Ú¬O¾ã§Î¬É¸ÌªºÃÀ³N®a#k§Ú¥i¥H§â§AªºÁyÅÜ±o¥Rº¡ÃÀ³N®ð®§­ò~<3\r\n\r\n#L2##b²´«¬#l\r\n#L3##b²´¦â#l\r\n#L4##b½§¦â#l");
+			cm.sendSimple("æˆ‘æ˜¯æ•´å½¢ç•Œè£¡çš„è—è¡“å®¶#kæˆ‘å¯ä»¥æŠŠä½ çš„è‡‰è®Šå¾—å……æ»¿è—è¡“æ°£æ¯å”·~<3\r\n\r\n#L2##bçœ¼åž‹#l\r\n#L3##bçœ¼è‰²#l\r\n#L4##bè†šè‰²#l");
 		} else if(status == 1) {
 			sel = selection;
 			if(selection == 2) {
@@ -30,7 +30,7 @@ function action(mode, type, selection) {
 						facenew.push(fface[i] + cm.getPlayer().getFace() % 1000 - (cm.getPlayer().getFace() % 100));
 					}
 				}
-				cm.sendStyle("¿ï¤@­Ó³ßÅwªº§a!", facenew);
+				cm.sendStyle("é¸ä¸€å€‹å–œæ­¡çš„å§!", facenew);
 			} else if(selection == 3) {
 				if(cm.getPlayer().getGender() == 0)
 					var current = cm.getPlayer().getFace() % 100 + 20000;
@@ -38,9 +38,9 @@ function action(mode, type, selection) {
 					var current = cm.getPlayer().getFace() % 100 + 21000;
 				colors = Array();
 				colors = Array(current , current + 100, current + 200, current + 300, current +400, current + 500, current + 600, current + 700);
-				cm.sendStyle("¿ï¤@­Ó³ßÅwªº§a!", colors);
+				cm.sendStyle("é¸ä¸€å€‹å–œæ­¡çš„å§!", colors);
 			} else if(selection == 4) {
-				cm.sendStyle("¿ï¤@­Ó³ßÅwªº§a!",skin)
+				cm.sendStyle("é¸ä¸€å€‹å–œæ­¡çš„å§!",skin)
 			}
 		} else if(status == 2) {
 			if(sel == 2) {
@@ -50,11 +50,11 @@ function action(mode, type, selection) {
 			} else if(sel == 4) {
 				cm.setSkin(skin[selection]);
 			}
-			cm.sendOk("§¹¦¨Åo~");
+			cm.sendOk("å®Œæˆå›‰~");
 			cm.dispose();
 		}
 	} else {
-		cm.sendOk("¦³»Ý­n¦A¨Ó­ò<3");
+		cm.sendOk("æœ‰éœ€è¦å†ä¾†å”·<3");
 		cm.dispose();
 		return;
 	}

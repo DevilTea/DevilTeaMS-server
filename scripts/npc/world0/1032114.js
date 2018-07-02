@@ -18,16 +18,16 @@ function action(mode, type, selection) {
 		status--;
     }
     if (status == 0) {
-		var selStr = "§A­n¶i¤J­×·Ò³õ¶Ü?";
+		var selStr = "ä½ è¦é€²å…¥ä¿®ç…‰å ´å—?";
 		for (var i = 0; i < num; i++) {
-			selStr += "\r\n#b#L" + i + "#ªk®v­×·Ò³õ " + i + " (" + cm.getPlayerCount(map + i) + "/" + maxp + ")#l#k";
+			selStr += "\r\n#b#L" + i + "#æ³•å¸«ä¿®ç…‰å ´ " + i + " (" + cm.getPlayerCount(map + i) + "/" + maxp + ")#l#k";
 		}
 		cm.sendSimple(selStr);
     } else if (status == 1) {
 		if (selection < 0 || selection >= num) {
 			cm.dispose();
 		} else if (cm.getPlayerCount(map + selection) >= maxp) {
-			cm.sendNext("³o­Ó­×·Ò³õªº¤H¼Æ¤wº¡");
+			cm.sendNext("é€™å€‹ä¿®ç…‰å ´çš„äººæ•¸å·²æ»¿");
 			status = -1;
 		} else {
 			cm.warp(map + selection, 0);

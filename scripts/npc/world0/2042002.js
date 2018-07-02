@@ -23,7 +23,7 @@ var status = 0;
 
 function start() {
     //action(1, 0, 0);
-	cm.sendOk("GM¤£·|­×(Åu¤â");
+	cm.sendOk("GMä¸æœƒä¿®(æ”¤æ‰‹");
 	cm.dispose();
 }
 
@@ -33,7 +33,7 @@ function action(mode, type, selection) {
     else {
         status++;
         if (status == 1) {
-            cm.sendYesNo("§A¦³¿³½ì°Ñ¥[#b©Çª«¾İ¥xÁÉ#k¶Ü?");
+            cm.sendYesNo("ä½ æœ‰èˆˆè¶£åƒåŠ #bæ€ªç‰©æ“‚å°è³½#kå—?");
         } else if(status == 2) {
 			cm.saveLocation("MIRROR");
 			cm.getPlayer().changeMap(980000000);

@@ -35,7 +35,7 @@ var cost = Array(1000, 1200, 800, 800, 1000);
 var selectedMap = -1;
 
 function start() {
-    cm.sendNext("«¢Åo!§Ú¬O#bºû¦h§Q¨È®q#kªº­pµ{¨®!§A·Q¥h­ş¸Ì©O?");
+    cm.sendNext("å“ˆå›‰!æˆ‘æ˜¯#bç¶­å¤šåˆ©äºå³¶#kçš„è¨ˆç¨‹è»Š!ä½ æƒ³å»å“ªè£¡å‘¢?");
 }
 
 function action(mode, type, selection) {
@@ -46,7 +46,7 @@ function action(mode, type, selection) {
             cm.dispose();
             return;
         } else if (status >= 2 && mode == 0) {
-            cm.sendNext("ÁÙ¦³¨Æ±¡­n³B²z¶Ü?¨SÃö«Y­n·f­pµ{¨®ªº¸Ü¦b¨Ó§ä§Ú§a!");
+            cm.sendNext("é‚„æœ‰äº‹æƒ…è¦è™•ç†å—?æ²’é—œä¿‚è¦æ­è¨ˆç¨‹è»Šçš„è©±åœ¨ä¾†æ‰¾æˆ‘å§!");
             cm.dispose();
             return;
         }
@@ -57,17 +57,17 @@ function action(mode, type, selection) {
         if (status == 1) {
             var selStr = "";
             if (cm.getJobId() == 0)
-                selStr += "§Ú­Ì¹ï©óªì¤ßªÌ¦³¶W¯ÅÀu´fªº»ù®æ!";
-            selStr += "¿ï¾Ü§Aªº¥Øªº¦a#b";
+                selStr += "æˆ‘å€‘å°æ–¼åˆå¿ƒè€…æœ‰è¶…ç´šå„ªæƒ çš„åƒ¹æ ¼!";
+            selStr += "é¸æ“‡ä½ çš„ç›®çš„åœ°#b";
             for (var i = 0; i < maps.length; i++)
-                selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + (cm.getJobId() == 0 ? cost[i] / 10 : cost[i]) + " ·¬¹ô)#l";
+                selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + (cm.getJobId() == 0 ? cost[i] / 10 : cost[i]) + " æ¥“å¹£)#l";
             cm.sendSimple(selStr);
         } else if (status == 2) {
-            cm.sendYesNo("§A­n«e©¹#b#m" + maps[selection] + "##k¤F¶Ü? ¬°¦¹·|ªá¶O#b"+ (cm.getJobId() == 0 ? cost[selection] / 10 : cost[selection]) + " ·¬¹ô#k.");
+            cm.sendYesNo("ä½ è¦å‰å¾€#b#m" + maps[selection] + "##käº†å—? ç‚ºæ­¤æœƒèŠ±è²»#b"+ (cm.getJobId() == 0 ? cost[selection] / 10 : cost[selection]) + " æ¥“å¹£#k.");
             selectedMap = selection;
         } else if (status == 3) {
             if (cm.getMeso() < (cm.getJobId() == 0 ? cost[selection] / 10 : cost[selection])) {
-                cm.sendNext("§A¨­¤Wªº·¬¹ô¤£¨¬­ò!");
+                cm.sendNext("ä½ èº«ä¸Šçš„æ¥“å¹£ä¸è¶³å”·!");
                 cm.dispose();
                 return;
             }

@@ -44,17 +44,17 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0 && mode == 1) {
-			cm.sendNext("®¥³ß§¹¦¨®ÉªÅªºµõÁ_²Õ¶¤¥ô°È!");
+			cm.sendNext("æ­å–œå®Œæˆæ™‚ç©ºçš„è£‚ç¸«çµ„éšŠä»»å‹™!");
 		} else if(status == 1) {
 			if(cm.canHold(1102003) && cm.canHold(2040602)) {
 				item = prizes[Math.floor(Math.random() * prizes.length)];
-				cm.sendNextPrev("¦]¬°§A­Ìªº§V¤O¡A³o¸Ì¦³¨Ç¼úÀy­nµ¹§A­Ì¡C");
+				cm.sendNextPrev("å› ç‚ºä½ å€‘çš„åŠªåŠ›ï¼Œé€™è£¡æœ‰äº›çå‹µè¦çµ¦ä½ å€‘ã€‚");
 			} else {
-				cm.sendOk("½ĞÀË¬d­I¥]ªÅ¶¡¬O§_¨¬°÷¡C");
+				cm.sendOk("è«‹æª¢æŸ¥èƒŒåŒ…ç©ºé–“æ˜¯å¦è¶³å¤ ã€‚");
 				cm.dispose();
 			}
 		} else if(status == 2) {
-			cm.sendOk("«á·|¦³´Á!");
+			cm.sendOk("å¾Œæœƒæœ‰æœŸ!");
 		} else if(status == 3) {
 			cm.gainItem(item, 1, true);
 			cm.warp(221024500);

@@ -1,12 +1,12 @@
 var ticket = new Array(4031047, 4031074, 4031331, 4031576);
 var cost = new Array(5000, 6000, 30000, 6000);
-var mapNames = new Array("Å]ªk´ËªL-ºû¦h§Q¨È®q", "ª±¨ã«°", "¯«¤ì§ø", "¯Ç¦è¨Fºz");
+var mapNames = new Array("é­”æ³•æ£®æ—-ç¶­å¤šåˆ©äºå³¶", "ç©å…·åŸ", "ç¥æœ¨æ‘", "ç´è¥¿æ²™æ¼ ");
 var mapName2 = new Array("Ellinia of Victoria Island", "Ludibrium", "Leafre of Minar Forest", "Nihal Desert");
 var select;
 var status = 0;
 
 function start() {
-    var where = "§A¦n¡A§Ú¬O³c°â«e©¹¦U¦aªº¥æ³q¤u¨ãªº°â²¼­û¡A§A­nÁÊ¶R«e©¹¦ó³Bªº²¼¨é?";
+    var where = "ä½ å¥½ï¼Œæˆ‘æ˜¯è²©å”®å‰å¾€å„åœ°çš„äº¤é€šå·¥å…·çš„å”®ç¥¨å“¡ï¼Œä½ è¦è³¼è²·å‰å¾€ä½•è™•çš„ç¥¨åˆ¸?";
     for (var i = 0; i < ticket.length; i++)
         where += "\r\n#L" + i + "##b" + mapNames[i] + "#k#l";
     cm.sendSimple(where);
@@ -19,10 +19,10 @@ function action(mode, type, selection) {
         status++;
         if (status == 1) {
             select = selection;
-            cm.sendYesNo("«e©¹ #b" + mapNames[select] + "#k ªº¯Z¦¸¬°¬ù¨C " + (select == 0 ? 3 : 1) + " ¤ÀÄÁ¤@¯Z¡A±N·|ªá¶O§A #b"+cost[select]+" ·¬¹ô#k¡C§A½T©w­nÁÊ¶R #b#i"+ticket[select]+"##t"+ticket[select]+"##k¶Ü?");
+            cm.sendYesNo("å‰å¾€ #b" + mapNames[select] + "#k çš„ç­æ¬¡ç‚ºç´„æ¯ " + (select == 0 ? 3 : 1) + " åˆ†é˜ä¸€ç­ï¼Œå°‡æœƒèŠ±è²»ä½  #b"+cost[select]+" æ¥“å¹£#kã€‚ä½ ç¢ºå®šè¦è³¼è²· #b#i"+ticket[select]+"##t"+ticket[select]+"##kå—?");
         } else if(status == 2) {
             if (cm.getMeso() < cost[select] || !cm.canHold(ticket[select]))
-                cm.sendOk("§A½T©w§A¦³ #b"+cost[select]+" ·¬¹ô¶Ü#k? ¦pªG·¬¹ô¨¬°÷ªº¸Ü¨º´NÀË¬d¤@¤U­I¥]¬O¤£¬O¦³¨¬°÷ªºªÅ¶¡¡C");
+                cm.sendOk("ä½ ç¢ºå®šä½ æœ‰ #b"+cost[select]+" æ¥“å¹£å—#k? å¦‚æœæ¥“å¹£è¶³å¤ çš„è©±é‚£å°±æª¢æŸ¥ä¸€ä¸‹èƒŒåŒ…æ˜¯ä¸æ˜¯æœ‰è¶³å¤ çš„ç©ºé–“ã€‚");
             else {
                 cm.gainMeso(-cost[select]);
                 cm.gainItem(ticket[select],1);

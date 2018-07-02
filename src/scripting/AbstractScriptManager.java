@@ -66,7 +66,7 @@ public abstract class AbstractScriptManager {
             if (c != null) {
                 c.setScriptEngine(path, engine);
             }
-            try (BufferedReader fr = new BufferedReader(new InputStreamReader(new FileInputStream(scriptFile),"UTF-8"));) {
+            try (BufferedReader fr = new BufferedReader(new InputStreamReader(new FileInputStream(scriptFile),"UTF-8"))) {
             	if (ServerConstants.JAVA_8){
             		engine.eval("load('nashorn:mozilla_compat.js');");
             	}

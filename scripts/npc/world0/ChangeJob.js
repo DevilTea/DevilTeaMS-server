@@ -24,25 +24,25 @@ function action(mode, type, selection) {
 	} else if(mode == 1) {
 		status++;
 		if(status == 0) {
-			if(checkJob0) {//Âà1
-				cm.sendYesNo("«¢Åo!!!#b#h ##k§Ú­Ì¤S¨£­±¤F!§A­n¿ï¾ÜÂ¾·~ªº²Ä¤@¶¥¬q¤F¶Ü?");
-			} else if(checkJob1) {//1Âà2
-				cm.sendYesNo("«¢Åo!!!#b#h ##k§Ú­Ì¤S¨£­±¤F!§A­n¿ï¾ÜÂ¾·~ªº²Ä¤G¶¥¬q¤F¶Ü?");
-			} else if(checkJob2) {//2Âà3
-				cm.sendYesNo("«¢Åo!!!#b#h ##k§Ú­Ì¤S¨£­±¤F!§A­n¿ï¾ÜÂ¾·~ªº²Ä¤T¶¥¬q¤F¶Ü?");
-			} else if(checkJob3) {//3Âà4
+			if(checkJob0) {//è½‰1
+				cm.sendYesNo("å“ˆå›‰!!!#b#h ##kæˆ‘å€‘åˆè¦‹é¢äº†!ä½ è¦é¸æ“‡è·æ¥­çš„ç¬¬ä¸€éšæ®µäº†å—?");
+			} else if(checkJob1) {//1è½‰2
+				cm.sendYesNo("å“ˆå›‰!!!#b#h ##kæˆ‘å€‘åˆè¦‹é¢äº†!ä½ è¦é¸æ“‡è·æ¥­çš„ç¬¬äºŒéšæ®µäº†å—?");
+			} else if(checkJob2) {//2è½‰3
+				cm.sendYesNo("å“ˆå›‰!!!#b#h ##kæˆ‘å€‘åˆè¦‹é¢äº†!ä½ è¦é¸æ“‡è·æ¥­çš„ç¬¬ä¸‰éšæ®µäº†å—?");
+			} else if(checkJob3) {//3è½‰4
 				if(jrace == 1) {
-					cm.sendOk("§A¤w¸g§¹¦¨©Ò¦³ÂàÂ¾Åo!");
+					cm.sendOk("ä½ å·²ç¶“å®Œæˆæ‰€æœ‰è½‰è·å›‰!");
 					cm.dispose();
 				} else {
-				cm.sendOk("¥Ø«e©|¥¼¶}©ñ4Âà");
+				cm.sendOk("ç›®å‰å°šæœªé–‹æ”¾4è½‰");
 					cm.dispose();
 				}
 			} else if(checkJob4) {
-				cm.sendOk("§A¤w¸g§¹¦¨©Ò¦³ÂàÂ¾Åo!");
+				cm.sendOk("ä½ å·²ç¶“å®Œæˆæ‰€æœ‰è½‰è·å›‰!");
 				cm.dispose();
 			} else {
-				cm.sendOk("¦n¤[¤£¨£!#b#h #~!");
+				cm.sendOk("å¥½ä¹…ä¸è¦‹!#b#h #~!");
 				cm.dispose();
 			}
 		} else if(status == 1) {
@@ -50,45 +50,45 @@ function action(mode, type, selection) {
 				if(jrace != 2) {
 					switch(jrace) {
 						case 0:
-							txt = "\r\n#b#L1#¼C¤h\r\n#L2#ªk®v\r\n#L3#¤}½b¤â\r\n#L4#µs¸é\r\n#L5#®üµs";
+							txt = "\r\n#b#L1#åŠå£«\r\n#L2#æ³•å¸«\r\n#L3#å¼“ç®­æ‰‹\r\n#L4#ç›œè³Š\r\n#L5#æµ·ç›œ";
 							break;
 						case 1:
-							txt = "\r\n#b#L110#¸t»î¼C¤h\r\n#L120#¯PµK§Å®v\r\n#L130#¯}­·¨ÏªÌ\r\n#L140#·t©]¦æªÌ\r\n#L150#°{¹p®«±N";
+							txt = "\r\n#b#L110#è–é­‚åŠå£«\r\n#L120#çƒˆç„°å·«å¸«\r\n#L130#ç ´é¢¨ä½¿è€…\r\n#L140#æš—å¤œè¡Œè€…\r\n#L150#é–ƒé›·æ‚å°‡";
 							break;
 					}
-					cm.sendSimple("±q©³¤U¿ï¤@­Ó§A³ßÅwªºÂ¾·~§a!\r\n" + txt);
+					cm.sendSimple("å¾åº•ä¸‹é¸ä¸€å€‹ä½ å–œæ­¡çš„è·æ¥­å§!\r\n" + txt);
 				} else {
-					cm.sendYesNo("½T©wÂàÂ¾?");
+					cm.sendYesNo("ç¢ºå®šè½‰è·?");
 				}
 			} else if(checkJob1) {
 				if (jrace == 0) {
 					switch(jtype) {
 						case 1:
-							txt = "\r\n#b#L11#¨g¾Ô¤h\r\n#L12#¨£²ßÃM¤h\r\n#L13#ºjÃM§L";
+							txt = "\r\n#b#L11#ç‹‚æˆ°å£«\r\n#L12#è¦‹ç¿’é¨å£«\r\n#L13#æ§é¨å…µ";
 							break;
 						case 2:
-							txt = "\r\n#b#L21#§Å®v¡]¤õ¡B¬r¡^\r\n#L22#§Å®v¡]¦B¡B¹p¡^\r\n#L23#¹¬«Q";
+							txt = "\r\n#b#L21#å·«å¸«ï¼ˆç«ã€æ¯’ï¼‰\r\n#L22#å·«å¸«ï¼ˆå†°ã€é›·ï¼‰\r\n#L23#åƒ§ä¾¶";
 							break;
 						case 3:
-							txt = "\r\n#b#L31#Ây¤H\r\n#L32#©¸¤}¤â";
+							txt = "\r\n#b#L31#çµäºº\r\n#L32#å¼©å¼“æ‰‹";
 							break;
 						case 4:
-							txt = "\r\n#b#L41#¨ë«È\r\n#L42#«Lµs";
+							txt = "\r\n#b#L41#åˆºå®¢\r\n#L42#ä¿ ç›œ";
 							break;
 						case 5:
-							txt = "\r\n#b#L51#¥´¤â\r\n#L52#ºj¤â";
+							txt = "\r\n#b#L51#æ‰“æ‰‹\r\n#L52#æ§æ‰‹";
 							break;
 					}
-					cm.sendSimple("±q©³¤U¿ï¤@­Ó§A³ßÅwªºÂ¾·~§a\r\n" + txt);
+					cm.sendSimple("å¾åº•ä¸‹é¸ä¸€å€‹ä½ å–œæ­¡çš„è·æ¥­å§\r\n" + txt);
 				} else {
-					cm.sendYesNo("§A·Ç³Æ¦n­n¦¨¬°§ó¥[±j¤j¤F¶Ü?");
+					cm.sendYesNo("ä½ æº–å‚™å¥½è¦æˆç‚ºæ›´åŠ å¼·å¤§äº†å—?");
 				}
 			} else if(checkJob2) {
-				cm.sendYesNo("§A·Ç³Æ¦nÅÜ±o§ó±j¤j¤F¶Ü??");
+				cm.sendYesNo("ä½ æº–å‚™å¥½è®Šå¾—æ›´å¼·å¤§äº†å—??");
 			} else if(checkJob3) {
 				cm.dispose();
 			} else {
-				cm.sendOk("¿ù»~!");
+				cm.sendOk("éŒ¯èª¤!");
 				cm.dispose();
 			}
 		} else if(status == 2) {
@@ -127,11 +127,11 @@ function action(mode, type, selection) {
 							jobid = 1500;
 							break;
 					}
-					cm.sendYesNo("§A¿ï¤F#b"+player.getJobName(jobid)+"#k°Ú!\r\n\r\n¤§«á¤£¯à¦A§ïÅo!½T©w¤F¶Ü?")
+					cm.sendYesNo("ä½ é¸äº†#b"+player.getJobName(jobid)+"#kå•Š!\r\n\r\nä¹‹å¾Œä¸èƒ½å†æ”¹å›‰!ç¢ºå®šäº†å—?")
 				} else {
 					jobid = 2100;
 					player.changeJobById(jobid);
-					cm.sendOk("ÂàÂ¾§¹¦¨!­nÅÜ±o§ó±j³á^O^");
+					cm.sendOk("è½‰è·å®Œæˆ!è¦è®Šå¾—æ›´å¼·å–”^O^");
 					cm.dispose();
 				}
 			} else if(checkJob1) {
@@ -174,25 +174,25 @@ function action(mode, type, selection) {
 							jobid = 520;
 							break;
 					}
-					cm.sendYesNo("§A¿ï¤F#b"+player.getJobName(jobid)+"#k°Ú!\r\n\r\n¤§«á¤£¯à¦A§ïÅo!½T©w¤F¶Ü?")
+					cm.sendYesNo("ä½ é¸äº†#b"+player.getJobName(jobid)+"#kå•Š!\r\n\r\nä¹‹å¾Œä¸èƒ½å†æ”¹å›‰!ç¢ºå®šäº†å—?")
 				} else {
 					jobid = nowjob + 10;
 					cm.teachSkillsByJob(player, jobid, 0, -1);
 					player.changeJobById(jobid);
-					cm.sendOk("ÂàÂ¾§¹¦¨!­nÅÜ±o§ó±j³á^O^");
+					cm.sendOk("è½‰è·å®Œæˆ!è¦è®Šå¾—æ›´å¼·å–”^O^");
 					cm.dispose();
 				}
 			} else if(checkJob2) {
 				jobid = nowjob + 1;
 				if(jrace == 2)cm.teachSkillsByJob(player, jobid, 0, -1);
 				player.changeJobById(jobid);
-				cm.sendOk("ÂàÂ¾§¹¦¨!­nÅÜ±o§ó±j³á^O^");
+				cm.sendOk("è½‰è·å®Œæˆ!è¦è®Šå¾—æ›´å¼·å–”^O^");
 				cm.dispose();
 			}
 		} else if(status == 3) {
 			if(checkJob0 || checkJob1) {
 				player.changeJob(MapleJob.getById(jobid));
-				cm.sendOk("ÂàÂ¾§¹¦¨!­nÅÜ±o§ó±j³á^O^");
+				cm.sendOk("è½‰è·å®Œæˆ!è¦è®Šå¾—æ›´å¼·å–”^O^");
 				cm.dispose();
 			}
 		}

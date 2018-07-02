@@ -40,7 +40,7 @@ function action(mode, type, selection) {
     if (mode == -1) {
         cm.dispose();//ExitChat
     }else if (mode == 0){
-        cm.sendOk("©ú´¼ªº¨M©w!½Ö¤£³ßÅw#b¼úÀy¶¥¬q#kªº·¬¹ô©O¡C");
+        cm.sendOk("æ˜æ™ºçš„æ±ºå®š!èª°ä¸å–œæ­¡#bçå‹µéšæ®µ#kçš„æ¥“å¹£å‘¢ã€‚");
         cm.dispose();//No
     } else {
         if (mode == 1)
@@ -49,12 +49,12 @@ function action(mode, type, selection) {
             status--;
         var eim = cm.getPlayer().getEventInstance();
         if (status == 0)
-            cm.sendYesNo("§A­nÂ÷¶}#b¼úÀy¶¥¬q#k¶Ü?");
+            cm.sendYesNo("ä½ è¦é›¢é–‹#bçå‹µéšæ®µ#kå—?");
         else if (status == 1) {
             if(isLeader())
-                cm.sendOk("¦n§a¡A§Aªº·l¥¢¡C");
+                cm.sendOk("å¥½å§ï¼Œä½ çš„æå¤±ã€‚");
             else{
-                cm.sendOk("½Ğ§Aªº¶¤ªø¨Ó©M§Ú»¡³o¥ó¨Æ¡C");
+                cm.sendOk("è«‹ä½ çš„éšŠé•·ä¾†å’Œæˆ‘èªªé€™ä»¶äº‹ã€‚");
                 cm.dispose();
             }
         }else if (status == 2) {

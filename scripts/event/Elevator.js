@@ -46,8 +46,8 @@ function cancelSchedule() {
 }
 
 function prepareGoDown() {
-	em.getChannelServer().getMapFactory().getMap(fromMap[0]).broadcastMessage(MaplePacketCreator.serverNotice(6, "¹q±è 5 ¬í«á§Y±N©¹µ£¸Ü§ø¤è¦V²¾°Ê"));
-	em.getChannelServer().getMapFactory().getMap(elevatorMap[0]).broadcastMessage(MaplePacketCreator.serverNotice(6, "¹q±è 5 ¬í«á§Y±N©¹µ£¸Ü§ø¤è¦V²¾°Ê"));
+	em.getChannelServer().getMapFactory().getMap(fromMap[0]).broadcastMessage(MaplePacketCreator.serverNotice(6, "é›»æ¢¯ 5 ç§’å¾Œå³å°‡å¾€ç«¥è©±æ‘æ–¹å‘ç§»å‹•"));
+	em.getChannelServer().getMapFactory().getMap(elevatorMap[0]).broadcastMessage(MaplePacketCreator.serverNotice(6, "é›»æ¢¯ 5 ç§’å¾Œå³å°‡å¾€ç«¥è©±æ‘æ–¹å‘ç§»å‹•"));
 	preparing = true;
 	em.schedule("goDown", 5000);
 }
@@ -77,8 +77,8 @@ function setNowPos(pos) {
 }
 
 function goDown() {
-	em.getChannelServer().getMapFactory().getMap(fromMap[0]).broadcastMessage(MaplePacketCreator.serverNotice(6, "¹q±èªùÃö³¬..."));
-	em.getChannelServer().getMapFactory().getMap(toMap[0]).broadcastMessage(MaplePacketCreator.serverNotice(6, "¹q±è¥¿¦b«e©¹¥»¼Ó¼h..."));
+	em.getChannelServer().getMapFactory().getMap(fromMap[0]).broadcastMessage(MaplePacketCreator.serverNotice(6, "é›»æ¢¯é–€é—œé–‰..."));
+	em.getChannelServer().getMapFactory().getMap(toMap[0]).broadcastMessage(MaplePacketCreator.serverNotice(6, "é›»æ¢¯æ­£åœ¨å‰å¾€æœ¬æ¨“å±¤..."));
 	em.getChannelServer().getMapFactory().getMap(elevatorMap[0]).warpEveryone(movingElevatorMap[0]);
 	preparing = false;
     moving = true;
@@ -89,7 +89,7 @@ function goDown() {
 }
 
 function arrivedDown() {
-	em.getChannelServer().getMapFactory().getMap(toMap[0]).broadcastMessage(MaplePacketCreator.serverNotice(6, "¹q±èªù¶}±Ò..."));
+	em.getChannelServer().getMapFactory().getMap(toMap[0]).broadcastMessage(MaplePacketCreator.serverNotice(6, "é›»æ¢¯é–€é–‹å•Ÿ..."));
 	em.getChannelServer().getMapFactory().getMap(toMap[0]).resetReactors();
     em.getChannelServer().getMapFactory().getMap(movingElevatorMap[0]).warpEveryone(toMap[0]);
     moving = false;
@@ -97,15 +97,15 @@ function arrivedDown() {
 }
 
 function prepareGoUp() {
-	em.getChannelServer().getMapFactory().getMap(fromMap[1]).broadcastMessage(MaplePacketCreator.serverNotice(6, "¹q±è 5 ¬í«á§Y±N©¹ª±¨ã«°¤è¦V²¾°Ê"));
-	em.getChannelServer().getMapFactory().getMap(elevatorMap[1]).broadcastMessage(MaplePacketCreator.serverNotice(6, "¹q±è 5 ¬í«á§Y±N©¹ª±¨ã«°¤è¦V²¾°Ê"));
+	em.getChannelServer().getMapFactory().getMap(fromMap[1]).broadcastMessage(MaplePacketCreator.serverNotice(6, "é›»æ¢¯ 5 ç§’å¾Œå³å°‡å¾€ç©å…·åŸæ–¹å‘ç§»å‹•"));
+	em.getChannelServer().getMapFactory().getMap(elevatorMap[1]).broadcastMessage(MaplePacketCreator.serverNotice(6, "é›»æ¢¯ 5 ç§’å¾Œå³å°‡å¾€ç©å…·åŸæ–¹å‘ç§»å‹•"));
 	preparing = true;
 	em.schedule("goUp", 5000);
 }
 
 function goUp() {
-	em.getChannelServer().getMapFactory().getMap(fromMap[1]).broadcastMessage(MaplePacketCreator.serverNotice(6, "¹q±èªùÃö³¬..."));
-	em.getChannelServer().getMapFactory().getMap(toMap[1]).broadcastMessage(MaplePacketCreator.serverNotice(6, "¹q±è¥¿¦b«e©¹¥»¼Ó¼h..."));
+	em.getChannelServer().getMapFactory().getMap(fromMap[1]).broadcastMessage(MaplePacketCreator.serverNotice(6, "é›»æ¢¯é–€é—œé–‰..."));
+	em.getChannelServer().getMapFactory().getMap(toMap[1]).broadcastMessage(MaplePacketCreator.serverNotice(6, "é›»æ¢¯æ­£åœ¨å‰å¾€æœ¬æ¨“å±¤..."));
 	em.getChannelServer().getMapFactory().getMap(elevatorMap[1]).warpEveryone(movingElevatorMap[1]);
 	preparing = false;
     moving = true;
@@ -116,7 +116,7 @@ function goUp() {
 }
 
 function arrivedUp() {
-	em.getChannelServer().getMapFactory().getMap(toMap[1]).broadcastMessage(MaplePacketCreator.serverNotice(6, "¹q±èªù¶}±Ò..."));
+	em.getChannelServer().getMapFactory().getMap(toMap[1]).broadcastMessage(MaplePacketCreator.serverNotice(6, "é›»æ¢¯é–€é–‹å•Ÿ..."));
 	em.getChannelServer().getMapFactory().getMap(toMap[1]).resetReactors();
     em.getChannelServer().getMapFactory().getMap(movingElevatorMap[1]).warpEveryone(toMap[1]);
     moving = false;

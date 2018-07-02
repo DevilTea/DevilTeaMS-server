@@ -1,6 +1,8 @@
 # Dumped Wz Xml files
 /wz/*
 
+/logs/*
+
 #
 # Project specific excludes
 #

@@ -11,13 +11,13 @@ function action(mode, type, selection) {
 	} else if(mode == 1) {
 		status++;
 		if(status == 0) {
-			cm.sendYesNo("§A­n¥h¥x¥_101°Ú?");
+			cm.sendYesNo("ä½ è¦å»å°åŒ—101å•Š?");
 		} else if(status == 1) {
 			cm.warp(742000104, 3);
 			cm.dispose();
 		}
 	} else {
-		cm.sendOk("¤£·Q¥h°Ú...");
+		cm.sendOk("ä¸æƒ³å»å•Š...");
 		cm.dispose();
 		return;
 	}

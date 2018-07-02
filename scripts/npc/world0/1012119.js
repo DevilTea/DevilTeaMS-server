@@ -22,16 +22,16 @@ function action(mode, type, selection) {
 			cm.sendYesNo("Would you like to go in the special Spore Training Center?");
 			status = 1;
 		}*/
-		var selStr = "§A­n¶i¤J­×·Ò³õ¶Ü?";
+		var selStr = "ä½ è¦é€²å…¥ä¿®ç…‰å ´å—?";
 		for (var i = 0; i < num; i++) {
-		selStr += "\r\n#b#L" + i + "#¤}½b¤â­×·Ò³õ " + i + " (" + cm.getPlayerCount(map + i) + "/" + maxp + ")#l#k";
+		selStr += "\r\n#b#L" + i + "#å¼“ç®­æ‰‹ä¿®ç…‰å ´ " + i + " (" + cm.getPlayerCount(map + i) + "/" + maxp + ")#l#k";
 		}
 		cm.sendSimple(selStr);
     } else if (status == 1) {
 		if (selection < 0 || selection >= num) {
 			cm.dispose();
 		} else if (cm.getPlayerCount(map + selection) >= maxp) {
-			cm.sendNext("³o­Ó­×·Ò³õªº¤H¼Æ¤wº¡");
+			cm.sendNext("é€™å€‹ä¿®ç…‰å ´çš„äººæ•¸å·²æ»¿");
 			status = -1;
 		} else {
 			cm.warp(map + selection, 0);

@@ -12,8 +12,8 @@ function action(mode, type, selection) {
 		status++;
 		var map = cm.getPlayer().getMapId();
 			if(status == 0) {
-				var txt = "§A¦n½Ğ°İ¦³¤°»ò»İ­nªA°Èªº¶Ü?";
-				if(map == 103000100) txt += "\r\n\r\n#b#L2#§Ú­n¥h¦èªùËm#l";
+				var txt = "ä½ å¥½è«‹å•æœ‰ä»€éº¼éœ€è¦æœå‹™çš„å—?";
+				if(map == 103000100) txt += "\r\n\r\n#b#L2#æˆ‘è¦å»è¥¿é–€ç”º#l";
 				cm.sendSimple(txt)
 			} else if(status == 1) {
 				sel = selection;

@@ -9,7 +9,7 @@
 ---------------------------------------------------------------------------------------------------
 **/
 
-var menu = new Array("ªZ³®®ç¶é","¤ÑªÅ¤§«°","ÆFÃÄ¤Û¹Ò","ªZ³®®ç¶é");
+var menu = new Array("æ­¦é™µæ¡ƒåœ’","å¤©ç©ºä¹‹åŸ","éˆè—¥å¹»å¢ƒ","æ­¦é™µæ¡ƒåœ’");
 var cost = new Array(1500,1500,500,1500);
 var hak;
 var display = "";
@@ -32,7 +32,7 @@ function action(mode, type, selection) {
             cm.dispose();
             return;
         } else if(mode == 0) {
-            cm.sendNext("¦pªG§A§ïÅÜ¥D·N¤F¦A¨Ó§ä§Ú´N¥i¥H¤F!");
+            cm.sendNext("å¦‚æœä½ æ”¹è®Šä¸»æ„äº†å†ä¾†æ‰¾æˆ‘å°±å¯ä»¥äº†!");
             cm.dispose();
             return;
         }
@@ -40,29 +40,29 @@ function action(mode, type, selection) {
         if (status == 0) {
             for(var i=0; i < menu.length; i++) {
                 if(cm.getPlayer().getMapId() == 200000141 && i < 1) {
-                    display += "\r\n#L"+i+"##b"+menu[i]+"("+cost[i]+" ·¬¹ô)#k";
+                    display += "\r\n#L"+i+"##b"+menu[i]+"("+cost[i]+" æ¥“å¹£)#k";
                 } else if(cm.getPlayer().getMapId() == 250000100 && i > 0 && i < 3) {
-                    display += "\r\n#L"+i+"##b"+menu[i]+"("+cost[i]+" ·¬¹ô)#k";
+                    display += "\r\n#L"+i+"##b"+menu[i]+"("+cost[i]+" æ¥“å¹£)#k";
                 }
             }
             if(cm.getPlayer().getMapId() == 200000141 || cm.getPlayer().getMapId() == 251000000) {
-                btwmsg = "#b¤ÑªÅ¤§«°#k ¨ì #bªZ³®®ç¶é#k";
+                btwmsg = "#bå¤©ç©ºä¹‹åŸ#k åˆ° #bæ­¦é™µæ¡ƒåœ’#k";
             } else if(cm.getPlayer().getMapId() == 250000100) {
-                btwmsg = "#bbªZ³®®ç¶é#k ¨ì #¤ÑªÅ¤§«°#k";
+                btwmsg = "#bbæ­¦é™µæ¡ƒåœ’#k åˆ° #å¤©ç©ºä¹‹åŸ#k";
             }
             if(cm.getPlayer().getMapId() == 251000000) {
-                cm.sendYesNo("§A¦n¡A­n¤£­n¹Á¸Õ«e©¹»·¤è®È¦æ? §Ú¤w¸g¸ü¹L¦n¦h¹³§A¤@¼Ëªº®È¦æªÌ¥h #b"+menu[3]+"#k ¡A§A¦³¿³½ì¶Ü? ÁöµM¤£¹³­¸²î¤@¼ËÃ­©w¡A¦ı§Ú¥i¥H§ó§Ö³t¦a©è¹F¥Øªº¦a¡A¥u­n§Aµ¹§Ú #b"+cost[2]+" ·¬¹ô#k §Ú´N¸ü§A¹L¥h");
+                cm.sendYesNo("ä½ å¥½ï¼Œè¦ä¸è¦å˜—è©¦å‰å¾€é æ–¹æ—…è¡Œ? æˆ‘å·²ç¶“è¼‰éå¥½å¤šåƒä½ ä¸€æ¨£çš„æ—…è¡Œè€…å» #b"+menu[3]+"#k ï¼Œä½ æœ‰èˆˆè¶£å—? é›–ç„¶ä¸åƒé£›èˆ¹ä¸€æ¨£ç©©å®šï¼Œä½†æˆ‘å¯ä»¥æ›´å¿«é€Ÿåœ°æŠµé”ç›®çš„åœ°ï¼Œåªè¦ä½ çµ¦æˆ‘ #b"+cost[2]+" æ¥“å¹£#k æˆ‘å°±è¼‰ä½ éå»");
             } else if(cm.getPlayer().getMapId() == 250000100) {
-                cm.sendSimple("§A¦n¡A­n¤£­n¹Á¸Õ«e©¹»·¤è®È¦æ? §Úª¾¹D¥Î¸}¨«·|¤ñ§Ú¥Î­¸ªºÁÙ­n§xÃø §Ú¤w¸g¸ü¹L¦n¦h¹³§A¤@¼Ëªº®È¦æªÌ¥h #b¨ä¥L°Ï°ì#k ¡A§A¦³¿³½ì¶Ü? ¦³»İ­nªº¸Ü¿ï¾Ü§A­n¥hªº¦a¤è\r\n"+display);
+                cm.sendSimple("ä½ å¥½ï¼Œè¦ä¸è¦å˜—è©¦å‰å¾€é æ–¹æ—…è¡Œ? æˆ‘çŸ¥é“ç”¨è…³èµ°æœƒæ¯”æˆ‘ç”¨é£›çš„é‚„è¦å›°é›£ æˆ‘å·²ç¶“è¼‰éå¥½å¤šåƒä½ ä¸€æ¨£çš„æ—…è¡Œè€…å» #bå…¶ä»–å€åŸŸ#k ï¼Œä½ æœ‰èˆˆè¶£å—? æœ‰éœ€è¦çš„è©±é¸æ“‡ä½ è¦å»çš„åœ°æ–¹\r\n"+display);
             } else {
-                cm.sendSimple("§A¦n¡A­n¤£­n¹Á¸Õ«e©¹»·¤è®È¦æ? §Ú¤w¸g¸ü¹L¦n¦h¹³§A¤@¼Ëªº®È¦æªÌ¥h #b¨ä¥L°Ï°ì#k ¡A§A¦³¿³½ì¶Ü? ¦³»İ­nªº¸Ü¿ï¾Ü§A­n¥hªº¦a¤è\r\n"+display);
+                cm.sendSimple("ä½ å¥½ï¼Œè¦ä¸è¦å˜—è©¦å‰å¾€é æ–¹æ—…è¡Œ? æˆ‘å·²ç¶“è¼‰éå¥½å¤šåƒä½ ä¸€æ¨£çš„æ—…è¡Œè€…å» #bå…¶ä»–å€åŸŸ#k ï¼Œä½ æœ‰èˆˆè¶£å—? æœ‰éœ€è¦çš„è©±é¸æ“‡ä½ è¦å»çš„åœ°æ–¹\r\n"+display);
             }
         } else if(status == 1) {
             if(selection == 2) {
-                cm.sendYesNo("§A²{¦b´N­n«e©¹ #b"+menu[2]+"#k ¤F¶Ü? ¦pªG§A¦³ #b"+cost[2]+" ·¬¹ô#k¡A§Ú²{¦b´N±a§A¹L¥h");
+                cm.sendYesNo("ä½ ç¾åœ¨å°±è¦å‰å¾€ #b"+menu[2]+"#k äº†å—? å¦‚æœä½ æœ‰ #b"+cost[2]+" æ¥“å¹£#kï¼Œæˆ‘ç¾åœ¨å°±å¸¶ä½ éå»");
             } else {
                 if(cm.getMeso() < cost[selection]) {
-                    cm.sendNext("§A½T©w§A¦³¨¬°÷ªº·¬¹ô¶Ü?");
+                    cm.sendNext("ä½ ç¢ºå®šä½ æœ‰è¶³å¤ çš„æ¥“å¹£å—?");
                     cm.dispose();
                 } else {
                     if(cm.getPlayer().getMapId() == 251000000) {
@@ -80,7 +80,7 @@ function action(mode, type, selection) {
             }
         } else if(status == 2) {
             if(cm.getMeso() < cost[2]) {
-                cm.sendNext("§A½T©w§A¦³¨¬°÷ªº·¬¹ô¶Ü?");
+                cm.sendNext("ä½ ç¢ºå®šä½ æœ‰è¶³å¤ çš„æ¥“å¹£å—?");
                 cm.dispose();
             } else {
                 cm.gainMeso(-cost[2]);

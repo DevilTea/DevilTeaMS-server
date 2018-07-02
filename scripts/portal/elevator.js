@@ -1,16 +1,16 @@
 function enter(pi) {
 	var elevator = pi.getEventManager("Elevator");
 	if(elevator == null) {
-		pi.getPlayer().dropMessage(6, "¹q±è°±¥Î¤¤...");
+		pi.getPlayer().dropMessage(6, "é›»æ¢¯åœç”¨ä¸­...");
 	} else if(elevator.getIv().invokeFunction("isMoving")) {
-		pi.getPlayer().dropMessage(6, "½Ğµy«á¦A©I¥s¹q±è¡A¹q±è¥¿¦b©¹" + (elevator.getIv().invokeFunction("getNowPos").equals("uping") ? "ª±¨ã«°" : "µ£¸Ü§ø") + "¤è¦V²¾°Ê¤¤...");
+		pi.getPlayer().dropMessage(6, "è«‹ç¨å¾Œå†å‘¼å«é›»æ¢¯ï¼Œé›»æ¢¯æ­£åœ¨å¾€" + (elevator.getIv().invokeFunction("getNowPos").equals("uping") ? "ç©å…·åŸ" : "ç«¥è©±æ‘") + "æ–¹å‘ç§»å‹•ä¸­...");
 	} else if(!elevator.getIv().invokeFunction("isMoving")) {
 		if(pi.getMapId() == (elevator.getIv().invokeFunction("getNowPos").equals("up") ? 222020200 : 222020100)) {
             if(!elevator.getIv().invokeFunction("isPreparing")) elevator.getIv().invokeFunction(pi.getMapId() == 222020100 ? "prepareGoUp" : "prepareGoDown");
 			pi.warp(pi.getMapId() == 222020100 ? 222020110 : 222020210, 0);
 			return true;
 		} else {
-			pi.getPlayer().dropMessage(6, "½Ğµy«á¡A¤w©I¥s¹q±è¡C");
+			pi.getPlayer().dropMessage(6, "è«‹ç¨å¾Œï¼Œå·²å‘¼å«é›»æ¢¯ã€‚");
 			if(!elevator.getIv().invokeFunction("isPreparing")) elevator.getIv().invokeFunction(pi.getMapId() == 222020100 ? "prepareGoDown" : "prepareGoUp");
 		}
 	}

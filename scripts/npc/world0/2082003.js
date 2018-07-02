@@ -1,5 +1,5 @@
 function start() {
-cm.sendSimple("�p�G�A���ͻH�A�ڽT�w�A��h�쨺�C �p�G�A�Q�n���L��W�Q�����A����A�]�ݭn���w������C �ڬO�ߤ@�@�ӳѤU�Ӫ����k���H... �p�G�A�n�h���A�ڦ��@�ӿ�k�C�L�קA��ӬO����A����A�N���� #b�s#k...\r\n #L0##b�ڷQ�����@���s!#k#l");
+cm.sendSimple("如果你有翅膀，我確定你能去到那。 如果你想要飛過比鋒利的風，那麼你也需要堅硬的鱗片。 我是唯一一個剩下來知曉方法的人... 如果你要去那，我有一個辦法。無論你原來是什麼，此刻你將成為 #b龍#k...\r\n #L0##b我想成為一條龍!#k#l");
 }
 
 function action(m, t, s) {

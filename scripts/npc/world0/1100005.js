@@ -10,6 +10,6 @@
 **/
 
 function start() {
-	cm.sendOk("¦n¤Ñ®ð...");
+	cm.sendOk("å¥½å¤©æ°£...");
 	cm.dispose();
 }

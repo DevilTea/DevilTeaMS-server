@@ -49,7 +49,7 @@ function action(mode, type, selection) {
 				cm.gainItem(ticketId, -1);
 				cm.doGachapon();
 			} else {
-				cm.sendOk("½ĞÀË¬d­I¥]ªÅ¶¡¬O§_¨CÃş³£¦³¦Ü¤Ö¤@®æªÅ¶¡!");
+				cm.sendOk("è«‹æª¢æŸ¥èƒŒåŒ…ç©ºé–“æ˜¯å¦æ¯é¡éƒ½æœ‰è‡³å°‘ä¸€æ ¼ç©ºé–“!");
 			}
 		} else {
 			cm.dispose();

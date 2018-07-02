@@ -17,15 +17,15 @@ function start() {
 	case 701000000:
 	case 740000000:
 	    map = cm.getSavedLocation("WORLDTOUR");
-	    cm.sendSimple("¦b³o¸Ìª±ªº¦p¦ó©O?·Q¥h§Oªº¦a¤èÄ~Äò®È¹CÁÙ¬O¦^¨ì­ì¨Óªº¦a¤è©O? \n\r #b#L0#§ÚÁÙ¥i¥H¥h­şÃä?#l \n\r #L1#§Ú®È¦æ§¹¤F,§Ú­n¦^¥h#m"+map+"##l");
+	    cm.sendSimple("åœ¨é€™è£¡ç©çš„å¦‚ä½•å‘¢?æƒ³å»åˆ¥çš„åœ°æ–¹ç¹¼çºŒæ—…éŠé‚„æ˜¯å›åˆ°åŸä¾†çš„åœ°æ–¹å‘¢? \n\r #b#L0#æˆ‘é‚„å¯ä»¥å»å“ªé‚Š?#l \n\r #L1#æˆ‘æ—…è¡Œå®Œäº†,æˆ‘è¦å›å»#m"+map+"##l");
 	    break;
 	default:
 	    back = false;
 	    if (cm.getJob() == 0) {
-		cm.sendNext("HI §Ú¬O®È¹C¤pÀ°¤â¡A¥i¥H±a©p¥h¦U¦a¹Cª±\n\r «x!­ì¨Ó§A¬Oªì¤ßªÌ§r ³o¼Ëªº¸Ü§Ú¤]¤£¦¬§A¤Ó¦h\r\n#b300·¬¹ô´N¦n¤F");
+		cm.sendNext("HI æˆ‘æ˜¯æ—…éŠå°å¹«æ‰‹ï¼Œå¯ä»¥å¸¶å¦³å»å„åœ°éŠç©\n\r å’¦!åŸä¾†ä½ æ˜¯åˆå¿ƒè€…å‘€ é€™æ¨£çš„è©±æˆ‘ä¹Ÿä¸æ”¶ä½ å¤ªå¤š\r\n#b300æ¥“å¹£å°±å¥½äº†");
 		cost = 300;
 	    } else {
-		cm.sendNext("HI §Ú¬O®È¹C¤pÀ°¤â¡A¥i¥H±a©p¥h¦U¦a¹Cª±¡A¦¬§A3000·¬¹ô´N¦n¤F");
+		cm.sendNext("HI æˆ‘æ˜¯æ—…éŠå°å¹«æ‰‹ï¼Œå¯ä»¥å¸¶å¦³å»å„åœ°éŠç©ï¼Œæ”¶ä½ 3000æ¥“å¹£å°±å¥½äº†");
 		cost = 3000;
 	    }
 	    break;
@@ -47,14 +47,14 @@ function action(mode, type, selection) {
 
 	if (!back) {
 	    if (status == 0) {
-		cm.sendSimple("§Ú­Ì¥Ø«e¥u¦³´£¨Ñ¨ì¤é¥»®È¹C\r\n#L0##b#m800000000");
+		cm.sendSimple("æˆ‘å€‘ç›®å‰åªæœ‰æä¾›åˆ°æ—¥æœ¬æ—…éŠ\r\n#L0##b#m800000000");
 	    } else if (status == 1) {
-		cm.sendYesNo("¤é¥»¥j¥N¯«ªÀ¥Rº¡ªÌ¦³½ìªº®ğ®§¡A½Ğ°İ§A¬O§_­n«e©¹?");
+		cm.sendYesNo("æ—¥æœ¬å¤ä»£ç¥ç¤¾å……æ»¿è€…æœ‰è¶£çš„æ°£æ¯ï¼Œè«‹å•ä½ æ˜¯å¦è¦å‰å¾€?");
 	    /*} else if (status == 2) {
 		cm.sendNext("Check out the female shaman serving the Mushroom God, and I strongly recommend trying Takoyaki, Yakisoba, and other delicious food sold in the streets of Japan. Now, let's head over to #bMushroom Shrine#k, a mythical place if there ever was one.");*/
 	    } else if (status == 2) {
 		if (cm.getMeso() < cost) {
-		    cm.sendPrev("¤£¦n·N«ä§Aªºª÷¿ú¤£°÷³á");
+		    cm.sendPrev("ä¸å¥½æ„æ€ä½ çš„é‡‘éŒ¢ä¸å¤ å–”");
 		} else {
 		    cm.gainMeso(-cost);
 		    cm.saveLocation("WORLDTOUR");
@@ -86,7 +86,7 @@ function action(mode, type, selection) {
 			    togo3 = 740000000;
 			    break;
 		    }
-		    cm.sendSimple("·Q¥h­ş¸Ì©O? \n\r #b#L0##m"+togo1+"# (3,000 ·¬¹ô)#l \n\r #L1##m"+togo2+"# (3,000 ·¬¹ô)#l \n\r #L2##m"+togo3+"# (3,000 ·¬¹ô)#l");
+		    cm.sendSimple("æƒ³å»å“ªè£¡å‘¢? \n\r #b#L0##m"+togo1+"# (3,000 æ¥“å¹£)#l \n\r #L1##m"+togo2+"# (3,000 æ¥“å¹£)#l \n\r #L2##m"+togo3+"# (3,000 æ¥“å¹£)#l");
 
 		} else if (selection == 1) {
 		    cm.warp(map == -1 ? 100000000 : map);
@@ -96,11 +96,11 @@ function action(mode, type, selection) {
 	    } else if (status == 1) {
 		sel = selection;
 		if (sel == 0) {
-		    cm.sendNext("§A½T©w­n«e©¹ #b#m"+togo1+"##k?  ¨ì¨ºÃä»İ­n #b3,000 ·¬¹ô#k. ½T©w²{¦b­n¥h¶Ü?");
+		    cm.sendNext("ä½ ç¢ºå®šè¦å‰å¾€ #b#m"+togo1+"##k?  åˆ°é‚£é‚Šéœ€è¦ #b3,000 æ¥“å¹£#k. ç¢ºå®šç¾åœ¨è¦å»å—?");
 		} else if (sel == 1) {
-		    cm.sendNext("§A½T©w­n«e©¹  #b#m"+togo2+"##k? ¨ì¨ºÃä»İ­n #b3,000 ·¬¹ô#k. ½T©w²{¦b­n¥h¶Ü?");
+		    cm.sendNext("ä½ ç¢ºå®šè¦å‰å¾€  #b#m"+togo2+"##k? åˆ°é‚£é‚Šéœ€è¦ #b3,000 æ¥“å¹£#k. ç¢ºå®šç¾åœ¨è¦å»å—?");
 		} else if (sel == 2) {
-		    cm.sendNext("§A½T©w­n«e©¹  #b#m"+togo3+"##k? ¨ì¨ºÃä»İ­n #b3,000 ·¬¹ô#k. ½T©w²{¦b­n¥h¶Ü?");
+		    cm.sendNext("ä½ ç¢ºå®šè¦å‰å¾€  #b#m"+togo3+"##k? åˆ°é‚£é‚Šéœ€è¦ #b3,000 æ¥“å¹£#k. ç¢ºå®šç¾åœ¨è¦å»å—?");
 		}
 	    } else if (status == 2) {
 		if (sel == 0) {

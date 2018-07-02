@@ -1,10 +1,10 @@
 var status = -1;
 var sel;
 
-var destinations = new Array("Å]ªk´ËªL-ºû¦h§Q¨È®q", "ª±¨ã«°", "¯«¤ì§ø", "ªZ³®®ç¶é", "¯Ç¦è¨Fºz", "­C¹p¥±");
+var destinations = new Array("é­”æ³•æ£®æ—-ç¶­å¤šåˆ©äºå³¶", "ç©å…·åŸ", "ç¥æœ¨æ‘", "æ­¦é™µæ¡ƒåœ’", "ç´è¥¿æ²™æ¼ ", "è€¶é›·å¼—");
 
 function start() {
-	var message = "¤ÑªÅ¤§«°¯¸¦³µÛ³\¦h«e©¹¥@¬É¦U¦a¯¸¥xªº³q¹D¡A§A»İ­n¿ï¾Ü«e©¹¥Øªº¦aªº³q¹D¡A§A­n¿ï¾Ü­ş­Ó¥Øªº¦a?\r\n";
+	var message = "å¤©ç©ºä¹‹åŸç«™æœ‰è‘—è¨±å¤šå‰å¾€ä¸–ç•Œå„åœ°ç«™å°çš„é€šé“ï¼Œä½ éœ€è¦é¸æ“‡å‰å¾€ç›®çš„åœ°çš„é€šé“ï¼Œä½ è¦é¸æ“‡å“ªå€‹ç›®çš„åœ°?\r\n";
 	for(var i = 0; i < destinations.length; i++){
 		message += "\r\n#L" + i + "##b" + destinations[i] + "#l";
 	}
@@ -19,7 +19,7 @@ function action(mode, type, selection) {
     status++;
     if (status == 0){
         sel = selection;
-        cm.sendNext("¦nªº#b#h ##k§Ú²{¦b´N±a§A¨ì #b#m" + (200000110 + (sel * 10)) + "#");
+        cm.sendNext("å¥½çš„#b#h ##kæˆ‘ç¾åœ¨å°±å¸¶ä½ åˆ° #b#m" + (200000110 + (sel * 10)) + "#");
 	}else if (status == 1) {
         cm.warp(200000110 + (sel * 10));
         cm.dispose();

@@ -1,4 +1,4 @@
-//·¥«~ºñ¯ù
+//æ¥µå“ç¶ èŒ¶
 
 importPackage(Packages.client);
 
@@ -24,20 +24,20 @@ function action(mode, type, selection) {
     if(mode == 1) {
 		status += 1;
 	} else {
-		cm.sendOk("¤U¦¸¦A¨£");
+		cm.sendOk("ä¸‹æ¬¡å†è¦‹");
 		cm.dispose();
 		return;
 	}
 	
 	if(status == 0) {
-		cm.sendSimple("½Ğ°İ§A­n¹ï¯à¤O­È¶i¦æ¦óºØ¾Ş§@?#b\r\n\r\n#L0#­«¸m#l\r\n#L1#¤À°t#l");
+		cm.sendSimple("è«‹å•ä½ è¦å°èƒ½åŠ›å€¼é€²è¡Œä½•ç¨®æ“ä½œ?#b\r\n\r\n#L0#é‡ç½®#l\r\n#L1#åˆ†é…#l");
 	} else if(status == 1) {
 		sel = selection;
 		if(sel == 0) {
-			cm.sendYesNo(getNowInfo() + "\r\n\r\n" + getResetInfo() + "\r\n\r\n#r#e½T©w­«¸m?");
+			cm.sendYesNo(getNowInfo() + "\r\n\r\n" + getResetInfo() + "\r\n\r\n#r#eç¢ºå®šé‡ç½®?");
 		} else if(sel ==1) {
 			status = 11;
-			cm.sendSimple(getNowInfo() + "\r\n\r\n§A­n¦p¦ó¤À°t?\r\n\r\n#b#L0#¤O¶q#l\r\n#b#L1#±Ó±¶#l\r\n#b#L2#´¼¤O#l\r\n#b#L3#©¯¹B#l");
+			cm.sendSimple(getNowInfo() + "\r\n\r\nä½ è¦å¦‚ä½•åˆ†é…?\r\n\r\n#b#L0#åŠ›é‡#l\r\n#b#L1#æ•æ·#l\r\n#b#L2#æ™ºåŠ›#l\r\n#b#L3#å¹¸é‹#l");
 		}
 	} else if(status == 2) {
 		var points = nowAp + nowStr + nowDex + nowInt + nowLuk - 16;
@@ -52,25 +52,25 @@ function action(mode, type, selection) {
 		player.updateSingleStat(MapleStat.LUK, 4);
 		player.updateSingleStat(MapleStat.AVAILABLEAP, points);
 		init();
-		cm.sendNext("#r#e­«¸m§¹¦¨!\r\n\r\n" + getNowInfo());
+		cm.sendNext("#r#eé‡ç½®å®Œæˆ!\r\n\r\n" + getNowInfo());
 	} else if(status == 12) {
 		sel = selection;
-		var text = "§A­n¦b#b";
+		var text = "ä½ è¦åœ¨#b";
 		switch(sel) {
 			case 0:
-				text += "¤O¶q";
+				text += "åŠ›é‡";
 				break;
 			case 1:
-				text += "±Ó±¶";
+				text += "æ•æ·";
 				break;
 			case 2:
-				text += "´¼¤O";
+				text += "æ™ºåŠ›";
 				break;
 			case 3:
-				text += "©¯¹B";
+				text += "å¹¸é‹";
 				break;
 		}
-		text += "#k¤À°t¦h¤Ö¯à¤O­È©O?\r\n#b(½Ğ¿é¤J #r1 ~ " + nowAp + " #bªº¼Æ¦r)";
+		text += "#kåˆ†é…å¤šå°‘èƒ½åŠ›å€¼å‘¢?\r\n#b(è«‹è¼¸å…¥ #r1 ~ " + nowAp + " #bçš„æ•¸å­—)";
 		cm.sendGetText(text);
 	} else if(status == 13) {
 		var num = parseInt(cm.getText());
@@ -96,16 +96,16 @@ function action(mode, type, selection) {
 			player.setRemainingAp(nowAp - num);
 			player.updateSingleStat(MapleStat.AVAILABLEAP, nowAp - num);
 			init();
-			cm.sendNext("#r#e¤À°t§¹²¦!\r\n\r\n" + getNowInfo());
+			cm.sendNext("#r#eåˆ†é…å®Œç•¢!\r\n\r\n" + getNowInfo());
 		} else {
 			if(nowAp != 0)
-				cm.sendNext("½Ğ¿é¤J #r1 ~ " + nowAp + " #kªº¼Æ¦r");
+				cm.sendNext("è«‹è¼¸å…¥ #r1 ~ " + nowAp + " #kçš„æ•¸å­—");
 			else
-				cm.sendNext("§A¨S¦³¯à¤O­È¥i¥H¶i¦æ¤À°t");
+				cm.sendNext("ä½ æ²’æœ‰èƒ½åŠ›å€¼å¯ä»¥é€²è¡Œåˆ†é…");
 		}
 	} else if(status == 14 || status == 3) {
 		status = -1;
-		cm.sendYesNo("±z­n¦A¦¸¹ï¯à¤O­È¶i¦æ¾Ş§@¶Ü?");
+		cm.sendYesNo("æ‚¨è¦å†æ¬¡å°èƒ½åŠ›å€¼é€²è¡Œæ“ä½œå—?");
 	}
 }
 
@@ -118,12 +118,12 @@ function init() {
 }
 
 function getNowInfo() {
-	var info = "#e#b¥Ø«e¯à¤O­È : \r\n\r\n#n#k¤O¶q : #b" + nowStr + "#k\r\n\r\n±Ó±¶ : #b" + nowDex + "#k\r\n\r\n´¼¤O : #b" + nowInt + "#k\r\n\r\n©¯¹B : #b" + nowLuk + "#k\r\n\r\n³Ñ¾l¯à¤O­È : #b" + nowAp + "#k";
+	var info = "#e#bç›®å‰èƒ½åŠ›å€¼ : \r\n\r\n#n#kåŠ›é‡ : #b" + nowStr + "#k\r\n\r\næ•æ· : #b" + nowDex + "#k\r\n\r\næ™ºåŠ› : #b" + nowInt + "#k\r\n\r\nå¹¸é‹ : #b" + nowLuk + "#k\r\n\r\nå‰©é¤˜èƒ½åŠ›å€¼ : #b" + nowAp + "#k";
 	return info;
 }
 
 function getResetInfo() {
 	var newAp = nowAp + nowStr + nowDex + nowInt + nowLuk - 16;
-	var info = "#e#b­«¸m«á¯à¤O­È : \r\n\r\n#n#k¤O¶q : #b4#k\r\n\r\n±Ó±¶ : #b4#k\r\n\r\n´¼¤O : #b4#k\r\n\r\n©¯¹B : #b4#k\r\n\r\n³Ñ¾l¯à¤O­È : #b" + newAp + "#k";
+	var info = "#e#bé‡ç½®å¾Œèƒ½åŠ›å€¼ : \r\n\r\n#n#kåŠ›é‡ : #b4#k\r\n\r\næ•æ· : #b4#k\r\n\r\næ™ºåŠ› : #b4#k\r\n\r\nå¹¸é‹ : #b4#k\r\n\r\nå‰©é¤˜èƒ½åŠ›å€¼ : #b" + newAp + "#k";
 	return info;
 }

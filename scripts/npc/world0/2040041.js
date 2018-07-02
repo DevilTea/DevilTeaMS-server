@@ -28,6 +28,6 @@
 */
 
 function start() {
-    cm.sendOk("�A�̦n�A�w��Ө�Ĥ����A�յۧ�X���T�����ǩ�F�̳��ݪ��ǰe�����̡C");
+    cm.sendOk("你們好，歡迎來到第六關，試著找出正確的順序抵達最頂端的傳送門那裡。");
     cm.dispose();
 }

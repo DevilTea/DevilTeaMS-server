@@ -46,7 +46,7 @@ function action(mode, type, selection){
     var mapId = cm.getPlayer().getMapId();
     if (mapId == 103000890) {
         if (status == 0) {
-            cm.sendNext("¤U¦¸¦A¨£");
+            cm.sendNext("ä¸‹æ¬¡å†è¦‹");
         } else {
 			cm.getPlayer().changeMap(103000000, "mid00");
             //cm.getPlayer().changeMap(103000000, cm.getClient().getChannelServer().getMapFactory().getMap(103000000).getRandomSpawnpoint());
@@ -56,9 +56,9 @@ function action(mode, type, selection){
         }
     } else {
         if (status == 0) {
-            var outText = "¥u­n§A¤@©ñ±ó¡A¤U¦¸´N­n±qÀY¶}©l¡C  §A¤´­nÂ÷¶}¶Ü?";
+            var outText = "åªè¦ä½ ä¸€æ”¾æ£„ï¼Œä¸‹æ¬¡å°±è¦å¾é ­é–‹å§‹ã€‚  ä½ ä»è¦é›¢é–‹å—?";
             if (mapId == 103000805) {
-                outText = "§A­nÂ÷¶}¤F¶Ü?";
+                outText = "ä½ è¦é›¢é–‹äº†å—?";
             }
             cm.sendYesNo(outText);
         } else if (mode == 1) {

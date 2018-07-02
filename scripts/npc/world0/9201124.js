@@ -23,7 +23,7 @@ function action(mode, type, selection) {
             return;
         } 
 		if (status == 0) { 
-			cm.sendYesNo("§A·Q¥h¤}½b¤â§ø¶Ü?");
+			cm.sendYesNo("ä½ æƒ³å»å¼“ç®­æ‰‹æ‘å—?");
         }
         else if (status == 1) {
             cm.warp(100000000,0);

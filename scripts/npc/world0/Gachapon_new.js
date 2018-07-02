@@ -7,11 +7,11 @@ var enable = false;
 var status = -1;
 var costItemId = 5220000;
 var costItemQuantity = 1;
-var gachaponName = "¼é¬yÂà³J¾÷";
-var broadcastItem = [];//©â¨ì·|¼s¼½ªºª««~ID
+var gachaponName = "æ½®æµè½‰è›‹æ©Ÿ";
+var broadcastItem = [];//æŠ½åˆ°æœƒå»£æ’­çš„ç‰©å“ID
 var gachaponItemList = 
 [
-	//new GachaponItemObject(ª««~ID, ¼Æ¶q, Åv­«)
+	//new GachaponItemObject(ç‰©å“ID, æ•¸é‡, æ¬Šé‡)
 ];
 
 function GachaponItemObject(itemId, quantity, weight) {
@@ -24,7 +24,7 @@ function start() {
     if(enable) {
 		action(1, 0, 0);
 	} else {
-		cm.sendOk("#b" + gachaponName + " #k©|¥¼¶}©ñ");
+		cm.sendOk("#b" + gachaponName + " #kå°šæœªé–‹æ”¾");
 		cm.dispose();
 	}
 }
@@ -39,9 +39,9 @@ function action(mode, type, selection) {
 	
 	if(status == 0) {
 		if(cm.haveItem(costItemId, costItemQuantity)) {
-			cm.sendYesNo("§A¨­¤W¦³¨¬°÷ªº #b#i" + costItemId + "##t" + costItemId + "# #k§A­n¨Ï¥Î#b" +gachaponName + "#kÂà³J¶Ü?");
+			cm.sendYesNo("ä½ èº«ä¸Šæœ‰è¶³å¤ çš„ #b#i" + costItemId + "##t" + costItemId + "# #kä½ è¦ä½¿ç”¨#b" +gachaponName + "#kè½‰è›‹å—?");
 		} else {
-			cm.sendOk("§A¨­¤W¨S¦³¨¬°÷ªº #b#i" + costItemId + "##t" + costItemId + "#");
+			cm.sendOk("ä½ èº«ä¸Šæ²’æœ‰è¶³å¤ çš„ #b#i" + costItemId + "##t" + costItemId + "#");
 			cm.dispose();
 		}
 	} else if(status == 1) {
@@ -55,13 +55,13 @@ function action(mode, type, selection) {
 				item = new Item(getGachapon.itemId, 0, getGachapon.quantity);
 			}
 			if(isNeededBroadcast(getGachapon.itemId)) {
-				cm.getClient().getWorldServer().broadcastPacket(MaplePacketCreator.gachaponMessage("®¥³ß " + cm.getPlayer().getName() + " ±q -" + gachaponName + "- ©â¨ì¤F", item, " ¤j®a¤@°_®¥³ß¥L!"));
+				cm.getClient().getWorldServer().broadcastPacket(MaplePacketCreator.gachaponMessage("æ­å–œ " + cm.getPlayer().getName() + " å¾ -" + gachaponName + "- æŠ½åˆ°äº†", item, " å¤§å®¶ä¸€èµ·æ­å–œä»–!"));
 			}
 			MapleInventoryManipulator.addFromDrop(cm.getClient(), item, true);
 			cm.gainItem(costItemId, -1);
-			cm.sendOk("±q #b" + gachaponName + "#k ©â¨ì¤F #b#i" + item.getItemId() + "##t" + item.getItemId() + "#");
+			cm.sendOk("å¾ #b" + gachaponName + "#k æŠ½åˆ°äº† #b#i" + item.getItemId() + "##t" + item.getItemId() + "#");
 		} else {
-			cm.sendOk("½ĞÀË¬d­I¥]ªÅ¶¡¬O§_¨CÃş³£¦³¦Ü¤Ö¤@®æªÅ¶¡!")
+			cm.sendOk("è«‹æª¢æŸ¥èƒŒåŒ…ç©ºé–“æ˜¯å¦æ¯é¡éƒ½æœ‰è‡³å°‘ä¸€æ ¼ç©ºé–“!")
 		}
 		cm.dispose();
 	}

@@ -10,6 +10,6 @@
 **/
 
 function start() {
-    cm.sendOk("�u�O���M���R���@�ѡC �u�n�S��87���a�]�����դ@�ǩ_�Ǫ��ޯ�Ӥ����A�o���ӬO�@�ӧ�������{�C ���n�h�áA�o���Oĵ�i�O�¯١A�Ф��n�ϥΧA���ޯ�C");
+    cm.sendOk("真是風和日麗的一天。 只要沒有87玩家因為嘗試一些奇怪的技能而不見，這應該是一個完美的航程。 不要懷疑，這不是警告是威脅，請不要使用你的技能。");
     cm.dispose();
 }
