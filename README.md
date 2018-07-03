@@ -11,7 +11,7 @@
     
     
 # 架設
-1. 請前往 [release](https://github.com/DevilTea/DevilTeaMS-server/releases/tag/First) 下載 wz.zip 並解壓縮至伺服器資料夾
+1. 請下載 [wz.zip](https://drive.google.com/file/d/1IhVotvJLiAQiM0wDihx1eJYQGfLEiRlx/view?usp=sharing) 並解壓縮至伺服器資料夾
 
 2. 將伺服器資料夾中 sql目錄下的 DevilTeaMS.sql 導入且命名資料庫為 devilteams
 
