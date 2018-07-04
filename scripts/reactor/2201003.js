@@ -26,10 +26,10 @@
  
 function act() {
     if (rm.getPlayer().getMapId() == 922010900) {
-        rm.mapMessage(5, "Alishar has been summoned.");
+        rm.mapMessage(5, "巨型戰鬥機出現了!!!");
         rm.spawnMonster(9300012, 941, 184);
     } else if(rm.getPlayer().getMapId() == 922010700) {
-        rm.mapMessage(5, "Rombard has been summoned somewhere in the map.");
+        rm.mapMessage(5, "進化泥人領導者已經在地圖的某處被召喚出來...");
         rm.spawnMonster(9300010, 1, -211);
     }
 }
